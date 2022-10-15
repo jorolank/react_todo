@@ -1,2 +1,2 @@
 # react_todo
-Created with CodeSandbox
+React TODO using Code Sandbox
