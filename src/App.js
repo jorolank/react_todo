@@ -1,8 +1,7 @@
 import "./styles.css";
-import TodoForm from "./todoForm";
-import TodoList from "./todoList";
-import TodoPage from "./todoPage";
-import EditForm from "./editForm";
+import TodoForm from "./components/todoForm";
+import TodoList from "./components/todoList";
+import TodoPage from "./components/todoPage";
 
 export default function App() {
   return (
@@ -11,7 +10,6 @@ export default function App() {
       <TodoPage>
         <TodoForm />
         <TodoList />
-        <EditForm />
       </TodoPage>
     </div>
   );
