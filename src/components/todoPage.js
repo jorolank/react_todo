@@ -19,7 +19,7 @@ const TodoPage = ({ children }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTodo([...todo, addInputData]);
-    setAddInputData("");
+    setAddInputData("", setIndex(null));
   };
   //edit filter by id handler
   const handleEdit = (id) => {
@@ -34,7 +34,7 @@ const TodoPage = ({ children }) => {
     const removeTodo = todo.filter((_, index) => {
       return index !== i;
     });
-    setTodo(removeTodo, setShowEditForm(false));
+    setTodo(removeTodo, setShowEditForm(false), setIndex(null));
     return removeTodo;
   };
   //edit onchange handler
@@ -47,7 +47,7 @@ const TodoPage = ({ children }) => {
     e.preventDefault();
     const copyTodo = [...todo];
     copyTodo.splice(index, 1, editInputData);
-    setTodo(copyTodo, setShowEditForm(false));
+    setTodo(copyTodo, setShowEditForm(false), setIndex(null));
   };
 
   const todoContext = {

@@ -1,12 +1,14 @@
 import React from "react";
 
-const CustomInput = ({ label, onChange, value, type, onClick, name }) => {
+const CustomForm = ({ label, onChange, value, type, onClick, name }) => {
   return (
     <>
+    <form>
       <label>{label}</label>
       <input type={type} onChange={onChange} value={value} />
       <button onClick={onClick}>{name}</button>
+    </form>
     </>
   );
 };
-export default CustomInput;
+export default CustomForm;
