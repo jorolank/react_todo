@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "./todoPage";
-import CustomInput from "../common/customInput";
+import CustomForm from "../common/customForm";
 
 const TodoForm = () => {
   const {
@@ -14,9 +14,9 @@ const TodoForm = () => {
   } = useContext(Context);
 
   return (
-    <form>
+    <>
       <h2>{!showEditForm ? "Add Todo" : "Edit Todo"}</h2>
-      <CustomInput
+      <CustomForm
         label={!showEditForm ? "Add Todo: " : "Edit Todo : "}
         value={!showEditForm ? addInputData : editInputData}
         onChange={!showEditForm ? handleOnchange : handleChangeEdit}
@@ -24,7 +24,7 @@ const TodoForm = () => {
         name="Submit"
         onClick={!showEditForm ? handleSubmit : handleSubmitEdit}
       />
-    </form>
+    </>
   );
 };
 export default TodoForm;
